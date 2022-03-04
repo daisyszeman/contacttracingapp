@@ -86,6 +86,7 @@ div.indivlegend{
   margin: 0 auto;
   width: 800px;
   padding: 30px 0;
+  transform:translate(70px,0px);
 }
 
 ul li{

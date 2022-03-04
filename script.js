@@ -109,7 +109,7 @@ function mouseoveri(event, d){
             // .style('left', pt[0]+250+'px')
             // .style('top', pt[1]+100+'px') 
             .style("left",(event.pageX)+"px")
-            .style("top",(event.pageY-2750)+"px")
+            .style("top",(event.pageY-2710)+"px")
             .html(`<div style="font-size:14px; max-width:200px">${d.data.country}</div>`)
             
 }
