@@ -751,7 +751,7 @@ var colorset = [
 
 			legend.append("circle")
             .attr("cx", 100)
-            .attr("cy", 120)
+            .attr("cy", 160)
             .attr("r", 8)
             // .attr("width", 10)
             // .attr("height", 10)
@@ -760,7 +760,7 @@ var colorset = [
 
 			legend.append("text")
             .attr("x", 118)
-            .attr("y", 120)
+            .attr("y", 160)
             .attr("width", 40)
             .attr("dy", ".35em")
             .style("text-anchor", "start")
@@ -771,9 +771,9 @@ var colorset = [
 
 svg.append("g")
   .append('circle')
-  .attr('cx', 930)
-  .attr('cy', 65)
-  .attr('r',15)
+  .attr('cx', 1000)
+  .attr('cy', 120)
+  .attr('r',12)
   .attr("stroke", "black")
   .attr("stroke-width", "2")
   .attr("stroke-dasharray", "5,5")
@@ -782,9 +782,30 @@ svg.append("g")
 
 svg.append("g")
   .append('text')
-  .text('No. of dangerous premission')
-  .attr('x', 954)
-  .attr('y', 70)
+  .text('Size of circle: No. of')
+  .attr('x', 1018)
+  .attr('y', 116)
+;
+
+svg.append("g")
+  .append('text')
+  .text('dangerous premission')
+  .attr('x', 1018)
+  .attr('y', 136)
+;
+svg.append("g")
+  .append('text')
+  .text('Each circle stands for one app')
+  .attr('x', 988)
+  .attr('y', 76)
+;
+
+svg.append("g")
+  .append('text')
+  .style("font-weight","bold")
+  .text('Overview of tracker and permission in all the apps')
+  .attr('x', 0)
+  .attr('y', 40)
 ;
 
 
