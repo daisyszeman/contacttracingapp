@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - (FINAL_backup) D3 Tracking vs Premission </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- ---------Font Family--------- -->
+
+<link href="http://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet">
+
+<style>@import url('http://fonts.cdnfonts.com/css/tt-norms-pro');
+</style>
+
+
+<!-- ---------Structure--------- -->
+
+<!-- ------Hero+intro------ -->
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px; line-height:1.5;">Contact Tracing Applications</h1>
+    <div style="font-size:30px;margin-top:-10px;"> for combating COVID-19</div>
+  </div>
+</div>
+
+
+
+<div class="maintext">
+  <h2>What is contact tracing?</h2>
+  <div class="opening">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/03/Group-15.png" width="40px" style="padding-right:6px;">
+      
+<div>mid a global pandemic, our digital world naturally has turned to digital solutions
+<br>
+or contact tracing. Governments worldwide have seized this approach,</div>
+</div>    
+  
+releasing apps to perform automated contact tracing. 
+</img>
+<pre></pre>   
+<div>Contact tracing is the process of identifying and informing people that they have been exposed to an individual who tested positive for a virus so that they may take appropriate actions, such as isolating and testing. Traditionally, this was done manually through an interview with a patient about whom they were near during their infectious period. Then, the individuals at risk could be contacted. There could also be a public announcement of a location where a patient was and the time they were there. Digital contact tracing aims to perform an automated version of these interviews and notifications by collecting information from users and comparing this information to determine someone’s risk level. While a variety of protocols is adopted in different countries to perform contact tracing, resulting in widely differing security and privacy assurances. 
+</div>  
+<pre></pre>
+<div>
+This analysis aims at picturing the usage of contact tracing applications worldwide, the techologies and approaches, as well as the the privacy concern.
+</div>
+  
+</div>  
+
+
+</div>
+  
+</div>  
+
+
+<!-- ------Map------ -->
+<div class="maintext">
+  <h2>Is contact tracing applications widely adopted?</h2>
+
+  <div>
+  Until 31st December 2021, at least 94 countries/regions have launched contact tracing application as the technological solutions to control the spread of virus. In which 46 countries/regions will be the focus of this research, which have been previously analysed by Leah Krehling and Aleksander Essex ,The Department of Electrical and Computer Engineering, University of Western Ontario, in the article <a href="https://www.researchgate.net/publication/355248513_A_Security_and_Privacy_Scoring_System_for_Contact_Tracing_Apps">“A Security and Privacy Scoring System for Contact Tracing Apps”</a> published on 2021.
+  </div>  
+
+</div>  
+<br></br>
+<div class="maplegend"> Colored indicates countries with official contact tracing app. <br>Colored with darker green are the countries to be focused in this analysis.
+</div>  
+
+<div class="map" style="width:900px">
+<div class='tableauPlaceholder' id='viz1646359685739' style='position: relative'><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Countrieswithofficialcontacttracingapps&#47;Sheet2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1646359685739');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+<!-- ----------circlepacking------------ -->
+<div class="maintext">
+  <h2>How does contact tracing work?</h2>
+  <div class="circlepackingtext">
+    <div>A split has emerged between two different types of app - the so-called centralised and decentralised approaches.
+<pre></pre>
+Under the centralised model, data gathered from the app is uploaded to a centralised server where matches are made with other contacts, should a person start to develop Covid-19 symptoms.
+<pre></pre>
+By contrast, the decentralised model gives users more control over their information by keeping it on the phone. It is there that matches are made with people who may have contracted the virus.
+    </div>
+  </div>
+</div>  
+  <div class="circlepackingcanvas"></div>
+
+
+<!-- introduction of method -->
+
+<section>
+  <div class="maintext methodlist">
+    <div></div>
+    <div>
+      The common technologies used for contact tracing applications are as below:  
+    </div>
+    
+  <ul class="methodlist">
+    <li class="bluetoothbased">
+      <span><b>Bluetooth-Based</b></span>
+      <div style="padding:18px 0px; line-height:1.5;">An app broadcasts an anonymous identifier over Bluetooth, while at the same time scanning for other devices broadcasting from the app. When two devices detect each other, they exchange identifiers and log them along with other auxiliary information, such as signal strength.
+      </div>
+    </li>
+    <li class="gpsbased">
+      <span><b>GPS-Based</b></span>
+      <div style="padding:18px 0px;  line-height:1.5;">The app logs the GPS location data of the phone. The data are either streamed to a server or stored locally. When someone tests positive, places they had been during the infectious period are identified. Other people that were there at the same time are found, using the location data on the server, or updating a publicly available map.
+      </div>
+    </li>
+    <li class="datamining">
+      <span><b>Data mining</b> (Non-app-based system)</span>
+      <div style="padding:18px 0px;  line-height:1.5;">The system gathered tracking information from a variety of sources including mobile device tracking data and card transaction data, and combined these to generate notices via text messages to potentially-infected individuals.
+      </div>
+    </li>
+</ul>
+    <div class="maintext" style="font-size:12px;">     
+      *Only applications adopted automatic contact tracing method are included in this analysis, manual contact tracing method (e.g. QR code) is not included.
+    </div>
+  
+  
+</section>
+
+<!-- flow chart -->
+
+<section>
+<br></br>  
+<div class="maintext">
+  The following infographic illustrates how bluetooth works in both centralised and decentralised approach.
+</div>
+
+
+
+<div class="chart">
+ <div class="flowchart fade-in">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/infographic_centralised_Step1.svg" width=1080px></img>
+</div>
+
+ <div class="flowchart fade-in">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/infographic_centralised_Step2.svg" width=1080px></img>
+</div>
+
+ <div class="flowchart fade-in">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/flow-chart_Step3.svg" width=1080px></img>
+</div>
+
+ <div class="flowchart fade-in">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/infographic_centralised_Step4.svg" width=1080px></img>
+</div>
+
+ <div class="flowchart fade-in">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/flow-chart_Step5.svg" width=1080px></img>
+</div>
+</div>
+
+</section>
+
+<!-- Privacy Score -->
+
+<section>
+  
+<div class="maintext">
+  <h2>New forms of surveillance?</h2>
+  <div>
+    Contact tracing apps are the tech tool of the moment, yet without proper scrutiny, these tools have the potential to fundamentally alter the future of privacy and other human rights. These apps use a variety of protocols to perform contact tracing, resulting in widely differing security and privacy assurances.  
+  </div>
+<pre></pre>
+  <div>
+    In the article <a href="https://www.researchgate.net/publication/355248513_A_Security_and_Privacy_Scoring_System_for_Contact_Tracing_Apps">“A Security and Privacy Scoring System for Contact Tracing Apps”(Krehling, Essex 2021)</a>, an analysis of the privacy of contact tracing apps was performed with the intent of creating a metric of privacy. The applications were scrutinized through the lens of ten different privacy principles agreed by privacy and security experts,  scoring each application with a privacy score.
+  </div>
+
+  
+</div>  
+  
+  
+<div class="privacyscoretable" style="width:1280; height:200; position:relative" >
+  <svg class="forceGroup" style="width:1280; height:600"></svg>
+</div>
+</section>
+
+
+<!-- Tracking VS Premission chart -->
+
+
+<section>
+<div class="maintext">
+    <p>To further analyse the privacy of applications, all 46 apps are analysed on <a href="https://reports.exodus-privacy.eu.org/en/">εxodus</a>, which is a Privacy Auditing Platform for Android Applications. The trackers and permissions of each application are recorded. (*Applications on IOS platform is not analysed here) 
+  </p>
+  <div> Definition of the findings:
+  </div>
+  <pre></pre>
+  <div><b>Tracking</b></div>
+  <div>A tracker is a piece of software whose task is to gather information on the person using the application, on how they use it, or on the smartphone being used. 
+  </div>
+  <pre></pre>
+  <div><b>Permissions</b></div>
+  <div>Permissions are actions the application can do on your phone.  Some of these permissions are tagged as dangerous. This means that from Google’s point of view, the application can do bad things using this permission. εxodus uses the Google permission classification.
+  </div>
+  <pre></pre>
+  <div><b>Dangerous Permissions</b></div>
+  <div>Dangerous permission indicates a 'Dangerous' or 'Special' level according to <a href="https://developer.android.com/guide/topics/permissions/overview">Google's protection levels</div>.
+
+
+  </p>
+</div>
+</div>
+
+<div class="tackingvspremissiontable">
+</div>
+
+</section>
+
+<!-- Individual App -->
+
+<section>
+<h2 class="title">A closer look into each application</h2>
+
+
+<!-- ------Legend-------- -->
+<div class="indivlegend">
+  <ul class="indivlegend" style="line-height: 2.5; margin:0 10px;">
+    <li class="opensource">
+      <span>Open Source</span>
+      <div style="line-height:1.2;">The source code is open and auditable by anyone, which is considered to be more transparent and confident in privacy and safety.</span></div>
+    </li>
+    <pre></pre>
+    <li class="tracking">
+      <span>Tracking</span>
+    </li>
+</ul>
+<ul class="indivlegend" style="line-height: 2.5; margin:0 10px;">
+    <li class="premission">
+      <span>Premission</span>
+    </li>
+    
+    <li class="premissionno">
+      <span>Total number of premission</span>
+    </li>
+    
+    <li class="dangerpremission">
+      <span>Danger Premission</span>
+    </li>
+    
+    <li class="location">
+      <span>Fine location premission</span>
+    </li>
+</ul>
+			
+			
+
+</div>
+
+<!-- ------Legend-------- -->
+
+<div class="filter">
+	<a class="all current" href="#">ALL</a>
+	<a class="africa" href="#">Africa</a>
+  <a class="asia" href="#">Asia</a>
+  <a class="europe" href="#">Europe</a>
+	<a class="america" href="#">America</a>
+  <a class="oceania" href="#">Oceania</a>
+  <a class="middleeast" href="#">Middle East</a>
+</div>
+
+<div class="boxGroup">
+  
+<!-- ----------1.Australia---------- -->
+  <div class="box oceania">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/1.Australia_COVID-Safe01.svg" width="250px"></img>
+    <div class="title">Australia</div>
+    <div class="app">COVIDSafe</div>
+  </div>
+
+<!-- ----------2.Austria---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/2.Austria_Stopp-Corona.svg" width="250px"></img>
+    <div class="title">Austria</div>
+    <div class="app">Stopp Corona</div>
+  </div>
+
+<!-- ----------3.Azerbaijan---------- -->
+  <div class="box asia">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/3.Azerbaijan_eTabib.svg" width="250px">
+    <div class="title">Azerbaijan</div>
+    <div class="app">eTabib</div>
+  </div>
+
+<!-- ----------4.Bahrain---------- -->
+  <div class="box middleeast">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/4.Bahrain_BeAware-Bahrain.svg" width="250px">
+    <div class="title">Bahrain</div>
+    <div class="app">BeAware Bahrain</div>
+  </div>
+
+<!-- ----------5.Bangladesh---------- -->
+  <div class="box asia">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/5.Bangladesh_Corona-Tracer-BD.svg" width="250px">
+    <div class="title">Bangladesh</div>
+    <div class="app">Corona Tracer BD</div>
+  </div>
+
+<!-- ----------6.Canada---------- -->
+  <div class="box america">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/6.Canada_Covid-Alert.svg" width="250px">
+    <div class="title">Canada</div>
+    <div class="app">Covid Alert</div>
+  </div>
+
+<!-- ----------7.China---------- -->
+  <div class="box asia">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/7.China_Health-Code.svg" width="250px">
+    <div class="title">China</div>
+    <div class="app">Health Code <div style="color:red;"> *Information not available*</div></div>
+  </div>
+
+<!-- ----------8.Colombia---------- -->
+  <div class="box america">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/8.Colombia_MinSalud-Digital.svg" width="250px">
+    <div class="title">Colombia</div>
+    <div class="app">MinSalud Digital</div>
+  </div>
+
+<!-- ----------9.Czech Republic---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/9.Czech_eRouška.svg" width="250px">
+    <div class="title">Czech Republic</div>
+    <div class="app">eRouška</div>
+  </div>
+ 
+<!-- ----------10.Denmark---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/10.Denmark_Smittestop.svg" width="250px">
+    <div class="title">Denmark</div>
+    <div class="app">Smittestop</div>
+  </div>
+
+<!-- ----------11.Ecuador---------- -->
+  <div class="box america">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/11.Ecuador.svg" width="250px">
+    <div class="title">Ecuador</div>
+    <div class="app">ASI (SO)</div>
+  </div>
+
+<!-- ----------12.Estonia---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/12.Estonia_Hoia.svg" width="250px">
+    <div class="title">Estonia</div>
+    <div class="app">Hoia</div>
+  </div>
+
+<!-- ----------13.Ethiopia---------- -->
+  <div class="box africa">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/13.Ethiopia_Debo.svg" width="250px">
+    <div class="title">Ethiopia</div>
+    <div class="app">Debo</div>
+  </div>
+
+<!-- ----------14.France---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/14.France_TousAntiCovid.svg" width="250px">
+    <div class="title">France</div>
+    <div class="app">TousAntiCovid</div>
+  </div>
+
+<!-- ----------15.Fiji---------- -->
+  <div class="box oceania">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/15.Fiji_careFIJI.svg" width="250px">
+    <div class="title">Fiji</div>
+    <div class="app">careFIJI</div>
+  </div>
+
+<!-- ----------16.Finland---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/16.Finland_Koronavilkku.svg" width="250px">
+    <div class="title">Finland</div>
+    <div class="app">Koronavilkku</div>
+  </div>
+
+<!-- ----------17.Germany---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/17.Germany.svg" width="250px">
+    <div class="title">Germany</div>
+    <div class="app">Corona-Warn-App</div>
+  </div>
+
+
+<!-- ----------18.Ghana---------- -->
+  <div class="box africa">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/18.Ghana_GH-Covid19-Tracker-App.svg" width="250px">
+    <div class="title">Ghana</div>
+    <div class="app">GH Covid19 Tracker App</div>
+  </div>
+
+<!-- ----------19.Gibraltar---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/19.Gibraltar_Beat-Covid-Gibraltar.svg" width="250px">
+    <div class="title">Gibraltar</div>
+    <div class="app">Beat Covid Gibraltar</div>
+  </div>
+
+<!-- ----------20.Iceland---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/20.Iceland_Rakning-C19.svg" width="250px">
+    <div class="title">Iceland</div>
+    <div class="app">Rakning C19</div>
+  </div>
+
+<!-- ----------21.India---------- -->
+  <div class="box asia">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/21.India_Aarogya-Setu.svg" width="250px">
+    <div class="title">India</div>
+    <div class="app">Aarogya Setu</div>
+  </div>
+
+<!-- ----------22.Ireland---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/22.Ireland_COVID-Tracker.svg" width="250px">
+    <div class="title">Ireland</div>
+    <div class="app">COVID Tracker</div>
+  </div>
+
+<!-- ----------23.Israel---------- -->
+  <div class="box middleeast">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/23.Israel_HaMagen.svg" width="250px">
+    <div class="title">Israel</div>
+    <div class="app">HaMagen</div>
+  </div>
+
+<!-- ----------24.Italy---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/24.Italy_Immuni.svg" width="250px">
+    <div class="title">Italy</div>
+    <div class="app">Immuni</div>
+  </div>
+
+<!-- ----------25.Japan---------- -->
+  <div class="box asia">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/25.Japan_COVID19-Contact-Conﬁrming-Application.svg" width="250px">
+    <div class="title">Japan</div>
+    <div class="app">COVID19 Contact Conﬁrming Application</div>
+  </div>
+
+<!-- ----------26.Jordan---------- -->
+  <div class="box middleeast">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/26.Jordan_AMAN-APP.svg" width="250px">
+    <div class="title">Jordan</div>
+    <div class="app">AMAN APP</div>
+  </div>
+
+<!-- ----------27.Kazakhstan---------- -->
+  <div class="box asia">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/27.Kazakhstan_Saqbol.svg" width="250px">
+    <div class="title">Kazakhstan</div>
+    <div class="app">Saqbol</div>
+  </div>
+
+<!-- ----------28.Latvia---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/28.Lativa_Apturi-Covid.svg" width="250px">
+    <div class="title">Latvia</div>
+    <div class="app">Apturi Covid</div>
+  </div>
+
+<!-- ----------29.Malaysia---------- -->
+  <div class="box asia">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/29.Malaysia_MySejahtera.svg" width="250px">
+    <div class="title">Malaysia</div>
+    <div class="app">MySejahtera</div>
+  </div>
+
+<!-- ----------30.The Netherlands---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/30.The-Netherlands_CoronaMelder.svg" width="250px">
+    <div class="title">The Netherlands</div>
+    <div class="app">CoronaMelder</div>
+  </div>
+
+<!-- ----------31.New Zealand---------- -->
+  <div class="box oceania">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/31.New-Zealand_NZ-COVID-Tracer.svg" width="250px">
+    <div class="title">New Zealand</div>
+    <div class="app">NZ COVID Tracer</div>
+  </div>
+
+<!-- ----------32.North Macedonia---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/32.North-Macedonia_Stop-Korona.svg" width="250px">
+    <div class="title">North Macedonia</div>
+    <div class="app">Stop Korona!</div>
+  </div>
+
+<!-- ----------33.Northern Ireland---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/33.Northern-Ireland_StopCOVID-NI.svg" width="250px">
+    <div class="title">Northern Ireland</div>
+    <div class="app">StopCOVID NI</div>
+  </div>
+
+<!-- ----------34.Norway---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/34.Norway_Smittestopp.svg" width="250px">
+    <div class="title">Norway</div>
+    <div class="app">Smittestopp</div>
+  </div>
+
+<!-- ----------35.Poland---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/35.Poland_ProteGO-Safe.svg" width="250px">
+    <div class="title">Poland</div>
+    <div class="app">ProteGO Safe</div>
+  </div>
+
+<!-- ----------36.Portugal---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/36.Portugal_STAYAWAY-COVID.svg" width="250px">
+    <div class="title">Portugal</div>
+    <div class="app">STAYAWAY COVID</div>
+  </div>
+
+<!-- ----------37.Qatar---------- -->
+  <div class="box middleeast">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/37.Qatar_Ehteraz.svg" width="250px">
+    <div class="title">Qatar</div>
+    <div class="app">Ehteraz</div>
+  </div>
+
+<!-- ----------38.Russia---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/38.Russia_Contact-Tracer.svg" width="250px">
+    <div class="title">Russia</div>
+    <div class="app">Contact Tracer</div>
+  </div>
+
+<!-- ----------39.Saudi Arabia---------- -->
+  <div class="box middleeast">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/39.Saudi-Arabia_Tabaud.svg" width="250px">
+    <div class="title">Saudi Arabia</div>
+    <div class="app">Tabaud</div>
+  </div>
+
+<!-- ----------40.Scotland---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/40.Scoland_Protect-Scotland.svg" width="250px">
+    <div class="title">Scotland</div>
+    <div class="app">Protect Scotland</div>
+  </div>
+
+<!-- ----------41.Singapore---------- -->
+  <div class="box asia">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/41.Singapore_TraceTogether.svg" width="250px">
+    <div class="title">Singapore</div>
+    <div class="app">TraceTogether</div>
+  </div>
+
+<!-- ----------42.Slovenia---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/42.Slovenia_OstaniZdrav.svg" width="250px">
+    <div class="title">Slovenia</div>
+    <div class="app">#OstaniZdrav</div>
+  </div>
+
+<!-- ----------43.South Africa---------- -->
+  <div class="box africa">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/43.South-Africa_COVID-Alert-South-Africa.svg" width="250px">
+    <div class="title">South Africa</div>
+    <div class="app">COVID Alert South Africa</div>
+  </div>
+
+<!-- ----------44.Spain---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/44.Spain_Radar-COVID.svg" width="250px">
+    <div class="title">Spain</div>
+    <div class="app">Radar COVID</div>
+  </div>
+
+<!-- ----------45.Switzerland---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/45.Switzerland_SwissCovid-App.svg" width="250px">
+    <div class="title">Switzerland</div>
+    <div class="app">SwissCovid App</div>
+  </div>
+
+<!-- ----------46.United Kingdom---------- -->
+  <div class="box europe">
+    <img src="https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/46.United-Kingdom_NHS-COVID19.svg" width="250px">
+    <div class="title">United Kingdom</div>
+    <div class="app">NHS COVID-19</div>
+  </div>
+
+</div>
+</section>
+
+<!-- Conclusion -->
+<section>
+
+<div class="maintext">
+  <h2>What will be the next?</h2>
+  <div>
+    
+<pre></pre>    
+Contact tracing can be an important component of effective pandemic response, and contact tracing apps have the potential to support this objective. However, it is important to balance between contact tracing and privacy, to prevent it becomes a new form of digital surveiliance tool. 
+<pre></pre> 
+The global coronavirus pandemic is entering its third year, after the short, sharp shock of Omicron in early 2022, the pandemic phase of COVID-19 looks to be ending for most locations. Some countries have already official ended the usage of contract tracing apps. However, it is sad that global pandenics are happening more frequently in the last few decades, how contact tracing should be done will be a continuing topic to discuss. 
+
+   </div> 
+  
+</div> 
+    
+</section>
+
+<br></br>
+<br></br>
+<br></br>
+
+<!-- Footer -->
+
+<section class="footer" style="margin:10px;">
+  
+<div class="leftfooter">
+<p>  
+<a href="https://www.naba.it/en/">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4-rG_y_ZRsBkxkFb7PwNEsSQM0z1QhWQcaVcPDmnCh1kor3_WnFMmxAlzmZp-5s7HnDo&usqp=CAU" style="width:90px;padding:15px;"></a>
+</p>  
+</div>  
+  
+<div class="rightfooter">
+<div>
+Project Methodology of Visual Communication: Visual Design
+</div>
+<div>
+Master of Arts in User Experience Design (A.Y. 2021/2022)
+</div>
+<div>
+Area: Communication and Graphic Design
+</div>
+<div>
+By Cman Chiu @ Mar 2022
+</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://unpkg.com/scrollreveal'></script><script  src="./script.js"></script>
+
+</body>
+</html>

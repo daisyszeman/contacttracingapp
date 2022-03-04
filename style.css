@@ -1,0 +1,244 @@
+
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  font-family: 'TT Norms Pro', sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 0;
+}
+
+.opening{
+  display:flex;
+  align-items: flex-end;
+  justify-content: left;
+}
+.footer{
+  font-size:14px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.maintext{
+  margin: 0 auto;
+  width: 640px;
+}
+
+h2.title{
+  margin: 0 auto;
+  width: 640px;
+}
+  
+.map{
+  margin: 0 auto;
+}
+
+.maplegend{
+  width: 900px;
+  margin: 0 auto;
+}
+
+/* <!-- ------Hero+intro------ --> */
+
+.hero-image {
+  background-image: url(https://heiheicivilcelebrant.com/wp-content/uploads/2022/03/Hero-1.png);
+  background-color: #cccccc;
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text{
+  color: white;
+  text-align: left;
+  position: absolute;
+  top: 62%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* ----------circlepacking------------  */
+
+circle:hover{
+  opacity: 1 !important;
+}
+
+.circlepackingcanvas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+
+
+/* ----------icon list-------------- */
+
+div.indivlegend{
+  display: flex;
+  margin: 0 auto;
+  width: 800px;
+  padding: 30px 0;
+}
+
+ul li{
+  list-style-type: none;
+  margin-left:-40px;
+}
+
+ul.indivlegend{
+  width: 50%;
+}
+
+ul.methodlist li:before {
+  content: '';
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  margin-bottom:-20px;
+}
+
+ul li:before {
+  content: '';
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-size: 34px;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  margin-bottom:-25px;
+}
+
+ul li.bluetoothbased:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_icon_bluetooth.svg");
+}
+
+ul li.gpsbased:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_icon_GPS.svg");
+}
+
+ul li.datamining:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_icon_datamining.svg");
+}
+
+
+ul li.opensource:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_icon_phone.svg");
+}
+
+ul li.tracking:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_tracking_tracking.svg");
+}
+
+ul li.premission:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_icon_blackeye.svg");
+}
+
+ul li.premissionno:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_icon_number.svg");
+}
+
+ul li.dangerpremission:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_icon_redeye.svg");
+}
+
+ul li.location:before {
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/02/icon_icon_location.svg");
+}
+
+ul li.A:before {
+  height: 60px;
+  width: 35px;
+  top:-10px;
+  background-image: url("https://heiheicivilcelebrant.com/wp-content/uploads/2022/03/Group-15.png");
+}
+
+
+
+/* ----------icon list-------------- */
+
+.privacyscoretable{
+/*   display: flex; */
+  justify-content: center;
+  align-content: center;
+  margin-left:100px;
+}
+
+
+div.tackingvspremissiontable{
+  margin-left: 150px;
+/*   display: flex;
+  justify-content: center;
+  align-content: center; */
+  position: relative;
+}
+
+
+div.chart{
+  margin: 0 auto;
+  width: 1080px;
+}
+  
+
+  
+  
+/* // For individual app */
+
+.filter{
+  text-align: center;
+	margin: 2em auto;
+}
+
+.filter a{
+    text-align: center;
+    border: 1.5px black solid;
+    padding: .5em 1em;
+    margin-right: 5px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+
+.filter a.current{
+    background-color: black; 
+    color: white;
+}
+
+.filter a.current:hover{
+  background-color: black;
+}
+
+.filter a:hover{
+  background-color: #e8e8e8;
+}
+
+.boxGroup{
+  text-align:center;
+}
+
+.boxGroup .box{
+    width:300px;
+    height:300px;
+    display: inline-block;
+    margin-top: 20px;
+/*     border: 1px black solid; */
+}
+
+.boxGroup .box .title{
+  font-weight: bold;
+}
+
+/* // For individual app */
