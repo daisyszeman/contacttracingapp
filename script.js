@@ -922,10 +922,10 @@ svg.append("g")
 ScrollReveal({ reset: true });
 
 ScrollReveal().reveal(".show-once", {
-  reset: false
+  reset: true
 });
 
 ScrollReveal().reveal(".fade-in", {
-  duration: 5000,
+  duration: 3000,
   move: 0
 });
