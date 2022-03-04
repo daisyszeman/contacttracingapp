@@ -109,7 +109,7 @@ function mouseoveri(event, d){
             // .style('left', pt[0]+250+'px')
             // .style('top', pt[1]+100+'px') 
             .style("left",(event.pageX)+"px")
-            .style("top",(event.pageY-2300)+"px")
+            .style("top",(event.pageY-2350)+"px")
             .html(`<div style="font-size:14px; max-width:200px">${d.data.country}</div>`)
             
 }
@@ -464,7 +464,7 @@ d3.select('.forceGroup')
 d3.select('.forceGroup')
   .append("g")
   .append('text')
-  .text('One application')
+  .text('stands for one app')
   .attr('x', 1052)
   .attr('y', 110)
 ;
