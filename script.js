@@ -922,7 +922,7 @@ svg.append("g")
 ScrollReveal({ reset: true });
 
 ScrollReveal().reveal(".show-once", {
-  reset: true
+  reset: false
 });
 
 ScrollReveal().reveal(".fade-in", {
